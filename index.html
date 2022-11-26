@@ -31,56 +31,53 @@
           <div class="row">
             <div class="col-12 col-md-9">
               <div class="form-div text-white me-5">
-                <form action="">
+                <form action="" onsubmit="submitForm(event)">
                   <label for="fname">First Name</label>
                   <input
                     class="form-control"
                     type="text"
                     id="fname"
+                    name="fname"
                     placeholder="Enter First Name"
                     required
                   />
-                  <label for="sname">Second Name</label>
+                  <label for="lname">Second Name</label>
                   <input
                     class="form-control"
                     type="text"
-                    id="sname"
+                    id="lname"
+                    name="lname"
                     placeholder="Enter Second Name"
                     required
                   />
                   <label for="phone">Phone</label>
                   <input
                     class="form-control"
-                    type="number"
+                    type="tel"
                     id="phone"
+                    name="phone"
                     placeholder="Phone"
                     required
+                    pattern="[0-9]{10}"
+                    maxlength="10"
                   />
                   <label for="bgroup">Blood Group</label>
                   <select
                     name="bgroup"
-                    id="bgroup"
                     class="form-select"
                     required
                   >
-                    <option value="Default">Default</option>
-                    <option value="A+ve">A RhD positive (A+)</option>
-                    <option value="A-ve">A RhD negative (A-)</option>
-                    <option value="B+ve">B RhD positive (B+)</option>
-                    <option value="B-ve">B RhD negative (B-)</option>
-                    <option value="O+ve">O RhD positive (O+)</option>
-                    <option value="O-ve">O RhD negative (O-)</option>
-                    <option value="AB+ve">AB RhD positive (AB+)</option>
-                    <option value="AB-ve">AB RhD negative (AB-)</option>
+                    <option value="">Blood</option>
+                    <option>A RhD positive (A+)</option>
+                    <option>A RhD negative (A-)</option>
+                    <option>B RhD positive (B+)</option>
+                    <option>B RhD negative (B-)</option>
+                    <option>O RhD positive (O+)</option>
+                    <option>O RhD negative (O-)</option>
+                    <option>AB RhD positive (AB+)</option>
+                    <option>AB RhD negative (AB-)</option>
                   </select>
-                  <div class="submit-div">
-                    <button
-                      class="btn bg-warning submitBtn"
-                      onclick="submitForm();"
-                    >
-                      Submit
-                    </button>
-                  </div>
+                  <button class="btn bg-warning submitBtn my-4">Submit</button>
                 </form>
               </div>
             </div>
@@ -89,16 +86,14 @@
                 <table class="table text-white">
                   <thead>
                     <tr>
-                      <th scope="col">No.</th>
-                      <th scope="col">Name</th>
-                      <th scope="col">Blood Group</th>
-                      <th scope="col">Phone</th>
-                      <th scope="col">Status</th>
+                      <th>No.</th>
+                      <th>Name</th>
+                      <th>Blood Group</th>
+                      <th>Phone</th>
+                      <th>Status</th>
                     </tr>
                   </thead>
-                  <tbody>
-                    <tr></tr>
-                  </tbody>
+                  <tbody></tbody>
                 </table>
               </div>
             </div>
