@@ -38,7 +38,6 @@ nav ul li{
 .row{
     justify-content: center;
     align-items: center;
-    gap: 40px;
 }
 section{
     width: 100%;
