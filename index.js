@@ -9,8 +9,8 @@ function submitForm(e){
     data.push({
       fname : formData.get("fname"),
       lname : formData.get("lname"),
-      phone : formData.get("phone"),
-      bgroup : formData.get("bgroup")
+      bgroup : formData.get("bgroup"),
+      phone : formData.get("phone")
     })
     formElement.reset()
     populateTable()
@@ -23,8 +23,8 @@ function populateTable(){
     <tr>
     <td>${index+1}</td>
     <td>${item.fname + " " + item.lname}</td>
-    <td>${item.phone}</td>
     <td>${item.bgroup}</td>
+    <td>${item.phone}</td>
     <td><i class="fa fa-pencil-square-o mx-2" onclick="edit(${index})" aria-hidden="true"></i><i class="fa fa-trash-o" onclick="delte(${index})" aria-hidden="true"></i></td>
     `
   })
