@@ -40,7 +40,7 @@ function edit(i){
   document.querySelector('[name="lname"]').value = data[i].lname;
   document.querySelector('[name="phone"]').value = data[i].phone;
   document.querySelector('[name="bgroup"]').value = data[i].bgroup;
-  populateTable();
+  data.splic(i,1)
 }
   
 
