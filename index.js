@@ -7,8 +7,8 @@ function submitForm(e){
     let formElement = e.target;
     let formData = new FormData(formElement);
     data.push({
-      fname : formData.get("fname"),
-      lname : formData.get("lname"),
+      fname : formData.get("fname").toUpperCase(),
+      lname : formData.get("lname").toUpperCase(),
       bgroup : formData.get("bgroup"),
       phone : formData.get("phone")
     })
@@ -37,8 +37,8 @@ function delte(i){
    populateTable();
 }
 function edit(i){
-  document.querySelector('[name="fname"]').value = data[i].fname;
-  document.querySelector('[name="lname"]').value = data[i].lname;
+  document.querySelector('[name="fname"]').value = (data[i].fname).toLowerCase();
+  document.querySelector('[name="lname"]').value = (data[i].lname).toLowerCase();
   document.querySelector('[name="phone"]').value = data[i].phone;
   document.querySelector('[name="bgroup"]').value = data[i].bgroup;
   data.splice(i,1)
