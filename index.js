@@ -28,6 +28,7 @@ function populateTable(){
     <td><i class="fa fa-pencil-square-o mx-2" onclick="edit(${index})" aria-hidden="true"></i><i class="fa fa-trash-o" onclick="delte(${index})" aria-hidden="true"></i></td>
     `
   })
+    alert("Your Details Added Sucessfully")
   
 }
 
